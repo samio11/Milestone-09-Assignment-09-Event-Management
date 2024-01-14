@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import login1 from './Login_Animation.json'
 import Lottie from 'lottie-react';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,17 @@ import { passData } from './AuthProvider';
 
 const Login = () => {
 
-    const { user,loginUser } = useContext(passData)
+    const { user,loginUser,resetPassword1 } = useContext(passData)
+    const emailRef = useRef(null);
+
+    const handleForgetPassword = ()=>{
+     const email = emailRef.current.value;
+     resetPassword1(email)
+     .then(()=>{
+        toast("📪 Please Check you mail")
+     })
+     .catch(err=>console.log(err))
+    }
 
     const handleLogin = e => {
         e.preventDefault();
@@ -48,7 +58,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" name='email' className="input input-bordered" required />
+                                <input type="email" placeholder="email" ref={emailRef} name='email' className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -56,7 +66,7 @@ const Login = () => {
                                 </label>
                                 <input type="password" placeholder="password" name='password' className="input input-bordered" required />
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    <a href="#" onClick={handleForgetPassword} className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                                 <label className="label">
                                     <p className='text-xs'>Dont have any account?  <Link to={'/register'}> <span className='text-purple-600 font-semibold'>Register</span> </Link></p>

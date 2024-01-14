@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "./FireBaseConfig";
 
@@ -27,12 +27,16 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth,provider)
     }
 
+    const resetPassword1 = (email) =>{
+        return sendPasswordResetEmail(auth,email)
+    } 
+
     const logOut = () =>{
         return signOut(auth)
     }
 
 
-    const info = {user,createUser,loginUser,logOut,loginGoogle}
+    const info = {user,createUser,loginUser,logOut,loginGoogle,resetPassword1}
     return (
         <passData.Provider value={info}>
             {children}
