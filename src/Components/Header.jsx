@@ -1,7 +1,30 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink, Navigate } from 'react-router-dom';
+import { passData } from './AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaGoogle } from "react-icons/fa";
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Header = () => {
+    const {user,logOut,loginGoogle} = useContext(passData)
+    console.log(user)
+    const handleLogOut = () =>{
+        logOut()
+        .then(()=>{
+         toast("❎ Succesfully LogOut")
+        })
+        .catch(err=> console.log(err))
+    }
+
+    const handleGoogle = () =>{
+    const provider = new GoogleAuthProvider();
+    loginGoogle(provider)
+    .then(()=>{
+        toast("👨‍🦱 Succesful Google LogIn")
+    })
+    .catch(err => console.log(err))
+    }
     const dynamic_route = <>
     <li className='m-2'> <NavLink to={'/'}>Home</NavLink> </li>
     <li className='m-2'> <NavLink to={'/login'}>Login</NavLink> </li>
@@ -19,7 +42,7 @@ const Header = () => {
                             {dynamic_route}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Game-Web</a>
+                    <a className="btn btn-ghost text-xs md:text-xl">Game-Web</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -27,8 +50,17 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ? <div className='flex justify-center items-center gap-1 md:gap-2'>
+                         <p className='text-xs font-semibold'>{user.displayName}</p>
+                         <button onClick={handleLogOut} className='btn btn-outline'>Logout</button>
+                        </div> : <div className='flex flex-col md:flex-row justify-center items-center gap-2'>
+                         <button onClick={handleGoogle} className='btn btn-outline btn-accent'><FaGoogle /> Google SignIn</button>
+                         <button className='btn btn-outline btn-accent'> <Link to={'/login'}> SignIn Email </Link></button>
+                        </div>
+                    }
                 </div>
+                <ToastContainer />
             </div>
         </div>
     );

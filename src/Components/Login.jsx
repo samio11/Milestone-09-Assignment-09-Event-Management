@@ -6,15 +6,17 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { passData } from './AuthProvider';
 
+
 const Login = () => {
 
-    const { loginUser } = useContext(passData)
+    const { user,loginUser } = useContext(passData)
 
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+      
         if (!/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/.test(email)) {
             toast("📧 Invalid Email Type")
             return;
@@ -29,8 +31,8 @@ const Login = () => {
                 toast("🧑‍💼 Login Succesfully")
                 console.log(res.user)
             })
-            .catch(err => {
-                console.log(err)
+            .catch(() => {
+                toast("❌ You Didnt SignIn Yet")
             })
     }
     return (
