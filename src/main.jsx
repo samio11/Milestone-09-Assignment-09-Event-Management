@@ -8,6 +8,9 @@ import Login from './Components/Login'
 import Register from './Components/Register'
 import ErrorElement from './ErrorElement'
 import AuthProvider from './Components/AuthProvider'
+import PrivateRoute from './Components/PrivateRoute'
+import UpcommingEvents from './Components/UpcommingEvents'
+import GamingCommunity from './Components/GamingCommunity'
 
 
 const my_web_paths = createBrowserRouter([
@@ -27,7 +30,15 @@ const my_web_paths = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
-      }
+      },
+      {
+        path: '/upcommingEvents',
+        element: <PrivateRoute><UpcommingEvents></UpcommingEvents></PrivateRoute>
+      },
+      {
+        path: '/Community',
+        element: <PrivateRoute><GamingCommunity></GamingCommunity></PrivateRoute>
+      },
     ]
   }
 ])

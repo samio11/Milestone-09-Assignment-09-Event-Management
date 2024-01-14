@@ -29,6 +29,13 @@ const Header = () => {
     <li className='m-2'> <NavLink to={'/'}>Home</NavLink> </li>
     <li className='m-2'> <NavLink to={'/login'}>Login</NavLink> </li>
     <li className='m-2'> <NavLink to={'/register'}>Register</NavLink> </li>
+    {
+        user &&
+        <>
+        <li className='m-2'> <NavLink to={'/upcommingEvents'}>Upcomming Gaming Events</NavLink> </li>
+        <li className='m-2'> <NavLink to={'/Community'}>Gaming Community</NavLink> </li>
+        </>
+    }
     </>
     return (
         <div>
