@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import login1 from './Login_Animation.json'
 import Lottie from 'lottie-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { passData } from './AuthProvider';
@@ -11,6 +11,8 @@ const Login = () => {
 
     const { user,loginUser,resetPassword1 } = useContext(passData)
     const emailRef = useRef(null);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleForgetPassword = ()=>{
      const email = emailRef.current.value;
@@ -39,6 +41,7 @@ const Login = () => {
         loginUser(email, password)
             .then(res => {
                 toast("🧑‍💼 Login Succesfully")
+                navigate(location?.state ? location.state : '/')
                 console.log(res.user)
             })
             .catch(() => {

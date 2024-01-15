@@ -11,6 +11,7 @@ import AuthProvider from './Components/AuthProvider'
 import PrivateRoute from './Components/PrivateRoute'
 import UpcommingEvents from './Components/UpcommingEvents'
 import GamingCommunity from './Components/GamingCommunity'
+import ViewCardData from './Components/ViewCardData'
 
 
 const my_web_paths = createBrowserRouter([
@@ -40,6 +41,11 @@ const my_web_paths = createBrowserRouter([
         path: '/Community',
         element: <PrivateRoute><GamingCommunity></GamingCommunity></PrivateRoute>
       },
+      {
+        path : '/view/:id',
+        element : <PrivateRoute> <ViewCardData></ViewCardData> </PrivateRoute>,
+        loader : ()=> fetch('/MainData.json')
+      }
     ]
   }
 ])
