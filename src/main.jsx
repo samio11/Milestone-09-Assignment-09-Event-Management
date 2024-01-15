@@ -21,7 +21,8 @@ const my_web_paths = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader : ()=> fetch('/MainData.json')
       },
       {
         path: '/login',
