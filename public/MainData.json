@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Gaming Console",
+      "photo" : "https://assets-prd.ignimgs.com/2023/10/10/ps5thumb-1696954542971.jpg",
+      "price": 100,
+      "description": "Immerse yourself in the ultimate gaming experience with our Gaming Console point reward! This exclusive offer allows you to unlock a world of entertainment and adventure. Picture yourself in the driver's seat of cutting-edge gaming technology, surrounded by high-definition graphics, crystal-clear sound, and a seamless gaming environment. The Gaming Console point reward is your ticket to choosing from a variety of top-tier consoles, ranging from the latest PlayStation and Xbox models to state-of-the-art gaming PCs. Dive into the latest gaming titles and experience the thrill of next-gen gaming. Don't miss this opportunity to elevate your gaming setup and own the console of your dreams. Unleash the power of gaming innovation with our Gaming Console point redemption!"
+    },
+    {
+      "id": 2,
+      "name": "Tech Workshop Pass",
+      "photo" : "https://static.wixstatic.com/media/e8a1fb_cbd65ac96e654d0dbc4bf5972eb19204~mv2_d_1980_1320_s_2.jpg/v1/fill/w_560,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Pass-1.jpg",
+      "price": 50,
+      "description": "Delve into the heart of technology and innovation with our Tech Workshop Pass point reward! This pass is your golden ticket to a world of knowledge, hands-on experiences, and exclusive insights. Imagine being part of an immersive tech workshop led by industry experts and thought leaders. Gain access to the latest trends, emerging technologies, and practical demonstrations that will expand your understanding of the tech landscape. Whether you're a seasoned professional or an aspiring enthusiast, the Tech Workshop Pass is your key to unlocking new horizons in the ever-evolving world of technology. Seize this opportunity to enhance your skills and stay at the forefront of technological advancements. Don't miss out on this transformative experience!"
+    },
+    {
+      "id": 3,
+      "name": "Exclusive Merchandise",
+      "photo" : "https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2014/08/ARM780660.jpg",
+      "price": 20,
+      "description": "Indulge in the allure of exclusivity with our Exclusive Merchandise point reward! This unique offering allows you to treat yourself to a carefully curated collection of event-themed merchandise that reflects your passion for gaming and technology. From limited edition apparel to collectibles and accessories, this reward lets you take home a piece of the event experience. Each item is crafted with precision and designed to commemorate the excitement of the event. Showcase your dedication to the gaming and tech community with pride. This point redemption is your gateway to owning unique, high-quality merchandise that sets you apart as a true aficionado of the digital realm. Elevate your collection and celebrate your love for gaming and technology!"
+    },
+    {
+      "id": 4,
+      "name": "VIP Seating",
+      "photo" : "https://www.dreamseat.com/wp-content/uploads/2021/09/esports-banner_0004_BL2-62-of-127.jpg",
+      "price": 30,
+      "description": "Experience the pinnacle of event luxury with our VIP Seating point reward! Elevate your event participation to extraordinary heights with front-row access to main stage events, keynote presentations, and exclusive panels. Immerse yourself in the action with unparalleled views and premium seating arrangements designed for utmost comfort. The VIP Seating reward is tailored for those who seek the highest level of event luxury and a VIP treatment throughout the duration of the event. Revel in the luxury of priority seating, ensuring you don't miss a single moment of the excitement. Upgrade to VIP status and make your mark as a distinguished participant in the gaming and tech extravaganza. Treat yourself to the ultimate event experience with VIP Seating!"
+    },
+    {
+      "id": 5,
+      "name": "Virtual Reality Experience",
+      "photo" : "https://images.ctfassets.net/3dar4x4x74wk/4ybhyhyOS1G0ffJlAIaWRm/6fe1dabc24001dadeb6e6dba94e69f02/VR.jpg?w=808",
+      "price": 75,
+      "description": "Embark on an exhilarating journey into the immersive world of Virtual Reality with our Virtual Reality Experience point reward! Immerse yourself in mind-bending simulations, lifelike environments, and interactive adventures that push the boundaries of conventional gaming and entertainment. The Virtual Reality Experience reward offers you the opportunity to choose from a diverse array of VR experiences, ranging from adrenaline-pumping games to educational simulations. Whether you're a seasoned VR enthusiast or a first-time explorer, this point redemption promises a thrilling escapade into the limitless possibilities of virtual reality. Take the plunge and redefine your perception of reality with the Virtual Reality Experience point reward!"
+    },
+    {
+      "id": 6,
+      "name": "Tech Innovation Tour",
+      "photo" : "https://egw.news/uploads/news/1699024895099.jpg",
+      "price": 60,
+      "description": "Embark on a captivating journey through the realms of innovation with our Tech Innovation Tour point reward! Join a guided tour led by tech experts, exploring cutting-edge technologies, groundbreaking prototypes, and visionary displays. Immerse yourself in the future of technology as you witness firsthand the latest advancements in robotics, artificial intelligence, and more. The Tech Innovation Tour point redemption is your passport to a behind-the-scenes adventure, providing exclusive insights into the creative processes driving the tech industry forward. Seize the opportunity to be inspired and enlightened on this immersive Tech Innovation Tour. Explore the possibilities, witness innovation in action, and elevate your understanding of the tech landscape!"
+    }
+  ]
